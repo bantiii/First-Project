@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="26.875907">
+<testcase classname="signup for yelp account" name="cheking yelp signup functionality" time="26.875907">
+<system-out><![CDATA[Given user lands on yelp home page..........................................passed
+Then Click on Signup button.................................................passed
+Then user enter "firstn" "Bantamelak".......................................passed
+Then user enter "lastna" "Tafete"...........................................passed
+Then user enter "email" "tafete21@gmail.com"................................passed
+Then user enter "password" "fasika2112".....................................passed
+Then user enter "zipp" "20887"..............................................passed
+Then user select month......................................................passed
+Then user select date.......................................................passed
+Then user select year.......................................................passed
+Then Click on Signup buttonn................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
