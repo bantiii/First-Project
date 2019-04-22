@@ -25,8 +25,10 @@ import cucumber.api.Scenario;
 
 public class StepDefinition extends Lib {
 	public WebDriver driver;
-// the Second commit is here
-	// and from now on I will be writing all my commntes here get the refernce here please thank you n
+
+	// the Second commit is here
+	// and from now on I will be writing all my commntes here get the refernce
+	// here please thank you n
 	@Before
 	public void initialize(Scenario scenario) {
 		System.out.println("this is before class");
@@ -41,32 +43,37 @@ public class StepDefinition extends Lib {
 
 		driver.get("https://www.yelp.com/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		// this is new Change so make sure you know this
+		// and also you are asked to do this okay
 	}
 
 	public void tottalValue() {
 		System.out.println();
 	}
-@Test(priority = 0)
+
+	@Test(priority = 0)
 	@Given("^user lands on yelp home page$")
 	public void homepage() {
 		System.out.println("the title of the page is" + allpagetitle(driver));
 		scenario.write(" User on the Home page");
 	}
-@Test(priority = 1)
+
+	@Test(priority = 1)
 	@Then("^Click on Signup button$")
 	public void click_on_signup() throws InterruptedException, IOException {
 		WebElement ele = Findelement(driver, readproperties(driver, "sine"));
 		ele.click();
 	}
-@Test(priority = 2)
+
+	@Test(priority = 2)
 	@Then("^user enter \"([^\"]*)\" \"([^\"]*)\"$")
 	public void enter_all_credential(String key, String value)
 			throws InterruptedException, IOException {
 		Findelement(driver, readproperties(driver, key)).sendKeys(value);
 
 	}
-@Test(priority = 3)
+
+	@Test(priority = 3)
 	@Then("^user select month$")
 	public void month() throws InterruptedException, IOException {
 		WebElement state = driver.findElement(By
@@ -74,9 +81,11 @@ public class StepDefinition extends Lib {
 		Select select = new Select(state);
 		select.selectByIndex(3);
 		scenario.write("Month Selected Properly");
-		// So this is my second editing example of all the time you should know this
+		// So this is my second editing example of all the time you should know
+		// this
 	}
-@Test(priority = 4)
+
+	@Test(priority = 4)
 	@Then("^user select date$")
 	public void day() throws InterruptedException, IOException {
 		WebElement state = driver.findElement(By
@@ -86,7 +95,8 @@ public class StepDefinition extends Lib {
 		assert driver.getPageSource().toLowerCase().contains("dateasdfgh");
 		scenario.write("user set the Date here");
 	}
-@Test(priority = 5)
+
+	@Test(priority = 5)
 	@Then("^user select year$")
 	public void year() throws InterruptedException, IOException {
 		WebElement state = driver.findElement(By
@@ -98,7 +108,8 @@ public class StepDefinition extends Lib {
 		scenario.write("User Select year succesfully");
 
 	}
-@Test(priority = 6)
+
+	@Test(priority = 6)
 	@Then("^Click on Signup buttonn$")
 	public void click_on_signupp() throws InterruptedException, IOException {
 		WebElement ele2 = Findelement(driver,
@@ -122,11 +133,13 @@ public class StepDefinition extends Lib {
 	// {
 	//
 	// System.out.println(links.get(i).getText());
-	//5
-public void value(){
-	System.out.println(" the value will get executed right here");
-	System.out.println(" the value we have here is not our memeber so you don'n really worry about that Thanks");
-}
+	// 5
+	public void value() {
+		System.out.println(" the value will get executed right here");
+		System.out
+				.println(" the value we have here is not our memeber so you don'n really worry about that Thanks");
+	}
+
 	// }
 	//
 	// }
@@ -135,9 +148,10 @@ public void value(){
 	// public void takeScreenShot() throws IOException {
 	// takescreenshot(driver, "yelpp");
 	// }
-public void totolaValur(){
-	System.out.println("== All Automated ==");
-}
+	public void totolaValur() {
+		System.out.println("== All Automated ==");
+	}
+
 	@After()
 	public void killBrowser() {
 		scenario.write("Finished scenario");
